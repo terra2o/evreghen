@@ -24,7 +24,7 @@ project(
     evreghen
     VERSION 1.0.0
     DESCRIPTION "A Cross-Platform Game Engine and Build System for Terminal Games"
-    HOMEPAGE_URL "https://github.com/jayshozie/evreghen" # @REMINDER: the project will be moved to a separate GitHub account called evreghen at some point
+    HOMEPAGE_URL "https://github.com/terra2o/evreghen"
     LANGUAGES CXX
 )
 

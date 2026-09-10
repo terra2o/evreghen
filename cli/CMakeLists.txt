@@ -16,13 +16,11 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 add_executable(evreghen
-    # source files
+    main.cpp
 )
 
 target_link_libraries(evreghen PRIVATE engine)
 
 if(EVREGHEN_NO_GUI)
     target_compile_definitions(evreghen PRIVATE EVREGHEN_NO_GUI)
-else()
-    target_link_libraries(evreghen PRIVATE gui)
 endif()
