@@ -2,5 +2,6 @@
 license-helper.md
 
 # build artifacts
-evreghen
+/evreghen
 build/
+imgui.ini

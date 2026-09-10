@@ -3,6 +3,20 @@
 Thank you for using Evreghen! If you haven't read the [README](./README.md),
 please first read it, then come back.
 
+## Prerequisites
+
+Before building, make sure you have the following installed:
+- CMake 3.28 or later
+- A C++20 compliant compiler (GCC 11+, Clang 13+, or MSVC 2019+)
+- Terminal curses development libraries:
+  - **Linux (Debian/Ubuntu)**: `sudo apt install libncurses-dev`
+  - **Linux (Fedora/RHEL)**: `sudo dnf install ncurses-devel`
+  - **Linux (Arch)**: `sudo pacman -S ncurses`
+  - **macOS**: ncurses comes with the system or via Homebrew (`brew install ncurses`)
+  - **Windows**: PDCurses or PDCursesMod (via vcpkg or MSYS2)
+
+---
+
 ## Building Evreghen WITH The GUI
 
 <details>
@@ -10,7 +24,7 @@ please first read it, then come back.
 
 1. Clone the repo locally
 ```bash
-~/ $ git clone https://github.com/jayshozie/evreghen
+~/ $ git clone https://github.com/terra2o/evreghen
 ~/ $ cd evreghen
 ~/evreghen $
 ```
@@ -28,14 +42,14 @@ please first read it, then come back.
 ~/evreghen/build $ cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The GUI binary will be located at `./gui/evreghen-gui` and the CLI binary will be at `./cli/evreghen`.
 </details>
 <details>
     <summary>Windows</summary>
 
 1. Clone the repo locally
 ```powershell
-PS C:\Users\User> git clone https://github.com/jayshozie/evreghen
+PS C:\Users\User> git clone https://github.com/terra2o/evreghen
 PS C:\Users\User> cd evreghen
 PS C:\Users\User\evreghen>
 ```
@@ -53,14 +67,14 @@ PS C:\Users\Username\evreghen\build> cmake ..
 PS C:\Users\Username\evreghen\build> cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The GUI binary will be located at `.\gui\evreghen-gui.exe` (or `.\gui\Debug\evreghen-gui.exe` / `.\gui\Release\evreghen-gui.exe` depending on your generator), and the CLI binary will be at `.\cli\evreghen.exe`.
 </details>
 <details>
     <summary>*BSD</summary>
 
 1. Clone the repo locally
 ```bash
-~/ $ git clone https://github.com/jayshozie/evreghen
+~/ $ git clone https://github.com/terra2o/evreghen
 ~/ $ cd evreghen
 ~/evreghen $
 ```
@@ -78,14 +92,14 @@ Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to te
 ~/evreghen/build $ cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The GUI binary will be located at `./gui/evreghen-gui` and the CLI binary will be at `./cli/evreghen`.
 </details>
 <details>
     <summary>macOS</summary>
 
 1. Clone the repo locally
 ```bash
-~ % git clone https://github.com/jayshozie/evreghen
+~ % git clone https://github.com/terra2o/evreghen
 ~ % cd evreghen
 ~/evreghen %
 ```
@@ -103,7 +117,7 @@ Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to te
 ~/evreghen/build % cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The GUI binary will be located at `./gui/evreghen-gui` and the CLI binary will be at `./cli/evreghen`.
 </details>
 
 ---
@@ -115,7 +129,7 @@ Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to te
 
 1. Clone the repo locally
 ```bash
-~/ $ git clone https://github.com/jayshozie/evreghen
+~/ $ git clone https://github.com/terra2o/evreghen
 ~/ $ cd evreghen
 ~/evreghen $
 ```
@@ -133,14 +147,14 @@ Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to te
 ~/evreghen/build $ cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The CLI engine binary will be located at `./cli/evreghen`.
 </details>
 <details>
     <summary>Windows</summary>
 
 1. Clone the repo locally
 ```powershell
-PS C:\Users\User> git clone https://github.com/jayshozie/evreghen
+PS C:\Users\User> git clone https://github.com/terra2o/evreghen
 PS C:\Users\User> cd evreghen
 PS C:\Users\User\evreghen>
 ```
@@ -158,14 +172,14 @@ PS C:\Users\Username\evreghen\build> cmake -DEVREGHEN_NO_GUI=ON ..
 PS C:\Users\Username\evreghen\build> cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The CLI engine binary will be located at `.\cli\evreghen.exe` (or `.\cli\Debug\evreghen.exe` / `.\cli\Release\evreghen.exe` depending on your generator).
 </details>
 <details>
     <summary>*BSD</summary>
 
 1. Clone the repo locally
 ```bash
-~/ $ git clone https://github.com/jayshozie/evreghen
+~/ $ git clone https://github.com/terra2o/evreghen
 ~/ $ cd evreghen
 ~/evreghen $
 ```
@@ -183,14 +197,14 @@ Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to te
 ~/evreghen/build $ cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The CLI engine binary will be located at `./cli/evreghen`.
 </details>
 <details>
     <summary>macOS</summary>
 
 1. Clone the repo locally
 ```bash
-~ % git clone https://github.com/jayshozie/evreghen
+~ % git clone https://github.com/terra2o/evreghen
 ~ % cd evreghen
 ~/evreghen %
 ```
@@ -204,9 +218,9 @@ Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to te
 
 3. Build the project
 ```bash
-~/evreghen/build % cmake ..
+~/evreghen/build % cmake -DEVREGHEN_NO_GUI=ON ..
 ~/evreghen/build % cmake --build .
 ```
 
-Aaand, it's done! @TODO: Check where the GUI binary is, and edit this line to tell the user.
+The CLI engine binary will be located at `./cli/evreghen`.
 </details>
