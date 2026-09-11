@@ -2,6 +2,10 @@
 
 Evreghen is an open-source, cross-platform game engine and build system designed specifically for terminal games. It provides both a lightweight curses-based runtime for terminal gameplay and an interactive graphical editor powered by Dear ImGui, GLFW, and OpenGL 3 for designing scenes, inspecting resources, and editing entities live.
 
+## "Evreghen"? What does that mean?
+
+Evreghen means universe/dragon in Old Turkic.
+
 ---
 
 ## Features
