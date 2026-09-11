@@ -10,13 +10,10 @@ Evreghen means universe/dragon in Old Turkic.
 
 ## Features
 
-- **Terminal Curses Engine**: High-performance character grid rendering powered by `ncurses` (Unix/macOS) and `PDCurses` (Windows).
 - **Interactive GUI Scene Editor**: Desktop editor with a Godot-inspired node hierarchy, interactive 2D map viewport, entity inspector, integrated file system browser, and output logging console.
 - **Scene & Asset Serialization**: Lossless JSON scene formats compatible with the Tiled Map Editor specification (version 1.10+).
 - **Reusable Resource System**: Standalone JSON resource definitions for entity templates (NPCs and Enemies) with dialogue and stat configurations.
-- **Multi-Level Campaign Support**: Sequential dungeon progression with state and health preservation between floors.
-- **Headless Build Mode**: Flexible CMake configuration (`-DEVREGHEN_NO_GUI=ON`) allowing the engine to be compiled on servers and minimal environments as a headless build system.
-
+- **Headless Build Mode**: Flexible CMake configuration (`-DEVREGHEN_NO_GUI=ON`)
 ---
 
 ## Documentation
